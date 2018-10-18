@@ -13,10 +13,10 @@ document.bmiForm.bmi.value = finalBmi
 if(finalBmi < 18.5){
 document.bmiForm.meaning.value = "That you are too thin."
 }
-if(finalBmi > 18.5 && finalBmi < 25){
+if(finalBmi >= 18.5 && finalBmi < 25){
 document.bmiForm.meaning.value = "That you are healthy."
 }
-if(finalBmi > 25){
+if(finalBmi >= 25){
 document.bmiForm.meaning.value = "That you have overweight."
 }
 }
