@@ -1,6 +1,44 @@
 <html>
 <head>
-<title>Calcul my BMI</title>
+<title>Body Mass Index</title>
+
+<style>
+
+body {
+        color: white;
+}
+h3 {
+        color: white;
+}
+p {
+        color: white;
+}
+
+
+h3 {
+    background-color: #93B874;
+}
+
+body {
+    -webkit-animation: colorchange 15s infinite; 
+    animation: colorchange 15s infinite;
+}
+@-webkit-keyframes colorchange {
+     0%  {background: blue;}
+    25%  {background: #78281F;}
+    50%  {background: #117A65;}
+    75%  {background: #DC7633;}
+    100% {background: #9B59B6;}
+}
+@keyframes colorchange {
+     0%  {background: blue;}
+    25%  {background: #78281F;}
+    50%  {background: #117A65;}
+    75%  {background: #DC7633;}
+    100% {background: #9B59B6;}
+} 
+</style>
+
 
 <script language="JavaScript">
 <!--
@@ -11,13 +49,13 @@ if(weight > 0 && height > 0){
 var finalBmi = weight/(height/100*height/100)
 document.bmiForm.bmi.value = finalBmi
 if(finalBmi < 18.5){
-document.bmiForm.meaning.value = "That you are too thin."
+document.bmiForm.meaning.value = "You are too thin."
 }
-if(finalBmi >= 18.5 && finalBmi < 25){
-document.bmiForm.meaning.value = "That you are healthy."
+if(finalBmi > 18.5 && finalBmi < 25){
+document.bmiForm.meaning.value = "You are healthy."
 }
-if(finalBmi >= 25){
-document.bmiForm.meaning.value = "That you have overweight."
+if(finalBmi > 25){
+document.bmiForm.meaning.value = "You have overweight."
 }
 }
 else{
@@ -29,21 +67,19 @@ alert("Please Fill in everything correctly")
 
 </head>
 <body>
-<center><h3>BMI</h3></center>
+<center><h3>Body Mass Index (BMI)</h3></center>
 
 <script language="JavaScript">
 var today = new Date()
 document.write(today)
 </script>
-
 <form name="bmiForm">
-Your Weight(kg): <input type="text" name="weight" size="10"><br />
+<br>Your Weight(kg): <input type="text" name="weight" size="10"><br/>
 Your Height(cm): <input type="text" name="height" size="10"><br />
 <input type="button" value="Calculate BMI" onClick="calculateBmi()"><br />
-Your BMI: <input type="text" name="bmi" size="25"><br />
-Conclusion: <input type="text" name="meaning" size="35"><br />
+<br>Your BMI: <input type="text" name="bmi" size="25"><br />
+Conclusion: <input type="text" name="meaning" size="25"><br/>
 <input type="reset" value="Reset" />
 </form>
-
 </body>
 </html>
