@@ -6,4 +6,4 @@ javascript for BMI
 ___
 **code javascript is included in file : index.html
 --
-*buit with cordova--
+*buit with cordova
